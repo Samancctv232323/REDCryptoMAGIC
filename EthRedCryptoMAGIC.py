@@ -2,14 +2,14 @@
 # ----------------------------- Programmer Mmdrza.Com ---------------------- #
 import ctypes
 import time
-import optparse
+import argparse
 import multiprocessing
 from bip_utils import Bip32Slip10Secp256k1, Bip39MnemonicGenerator, Bip39SeedGenerator, Bip39WordsNum, EthAddrEncoder
 from rich import print
 
 
 def Main():
-    p = optparse.OptionParser()
+    p = argparse.ArgumentParser()
     p.add_option('-f', '--file', dest="filenameEth",
                  help="Ethereum Rich Address File With Type Format .TXT [Example: -f eth5.txt] ")
     p.add_option('-v', '--view', dest="ViewPrint", help="Print After Generated This Number Print And Report")
